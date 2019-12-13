@@ -18,10 +18,14 @@ const myReducer = (state= initialState , action)=>{
 	}
 	return newState;
 }
+//const action1 = {type: 'ADD', payload: 10};
+//const action2 = {type: 'SUB',payload: 5};
 
 const store = createStore(myReducer);
 console.log('current state',store.getState());
 store.dispatch({type: 'ADD', payload: 10});
+//store.dispatch(action1);
 console.log('After ADD',store.getState());
 store.dispatch({type: 'SUB',payload: 5});
+//store.dispatch(action1);
 console.log('After SUB',store.getState());
