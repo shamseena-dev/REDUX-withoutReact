@@ -8,10 +8,13 @@ const initialState = {
 const myReducer = (state= initialState , action)=>{
 	const newState = {...state};
 	if(action.type === 'ADD'){
-		newState.age = newState.age + 1;
+		//newState.age = newState.age + 1;
+		newState.age = newState.age + action.payload;
+
 	}
 	if(action.type === 'SUB'){
-		newState.age = newState.age -1;
+		//newState.age = newState.age -1;
+		newState.age = newState.age - action.payload;
 	}
 	return newState;
 }
